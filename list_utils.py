@@ -11,7 +11,7 @@ def get_item_at_position(list_in: List, pos: int) -> List:
     :return: Item in pos
     """
     pass  # remove pass statement and implement me
-
+    return list_in[pos]
 
 def print_list_items(list_in: List) -> None:
     """
@@ -21,7 +21,9 @@ def print_list_items(list_in: List) -> None:
     :return: None
     """
     pass  # remove pass statement and implement me
+    # for i in range(len(list_in))
 
+    # return list_in
 
 def sort_by_commit_count(list_in: List) -> List:
     """
@@ -31,7 +33,8 @@ def sort_by_commit_count(list_in: List) -> List:
     :return: The same list sorted in ascending order based on the commit count
     """
     pass  # remove pass statement and implement me
-
+    # list_in.sort( key=commit count,)
+    # return
 
 def gen_list_of_nums(n: int) -> List[int]:
     """
@@ -82,7 +85,8 @@ def concatenate_lists(list_a: List, list_b: List) -> List:
     :return: A list containing all elements from list_a and list_b
     """
     pass  # remove pass statement and implement me
-
+    list_c = list_a + list_b
+    return list_c
 
 def multiply_list(list_in: List, scalar: int) -> List:
     """
@@ -94,3 +98,5 @@ def multiply_list(list_in: List, scalar: int) -> List:
     :return: A list
     """
     pass  # remove pass statement and implement me
+
+    return list_in*scalar
