@@ -8,11 +8,13 @@ def is_anagram(first_string: str, second_string: str) -> bool:
     if len(first_string) != len(second_string):
         return False
     for i in range(int(len(first_string))):
-        first_string = first_string.lower()
-        second_string = second_string.lower()
+        # first_string = first_string.lower()
+        # second_string = second_string.lower()
+        # coding for the test as notes Man != man
         testing = True
         if first_string.find(second_string[i]) == 1:
             testing = True
         elif first_string.find(second_string[i]) == -1:
             testing = False
+            return testing
     return testing
