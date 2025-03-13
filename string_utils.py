@@ -32,8 +32,9 @@ def input_has_substring(str_in: str, sub_str_in: str) -> bool:
     """
     # pass  # remove pass statement and implement me
     # only passes 1 of 3
-
-    return str_in.find(sub_str_in) == 1
+    str_in = str_in.lower()
+    sub_str_in = sub_str_in.lower()
+    return str_in.find(sub_str_in) != -1
 
 def substring(str_in: str, start: int, stop: int) -> str:
     """
