@@ -1,3 +1,4 @@
+import math
 from typing import List
 from math import ceil
 
@@ -21,9 +22,9 @@ def print_list_items(list_in: List) -> None:
     :return: None
     """
     pass  # remove pass statement and implement me
-    # for i in range(len(list_in))
 
-    # return list_in
+    for x in list_in:
+        print(x)
 
 def sort_by_commit_count(list_in: List) -> List:
     """
@@ -33,8 +34,7 @@ def sort_by_commit_count(list_in: List) -> List:
     :return: The same list sorted in ascending order based on the commit count
     """
     pass  # remove pass statement and implement me
-    # list_in.sort( key=commit count,)
-    # return
+    return sorted(list_in, key=lambda x: x[1], reverse=False)
 
 def gen_list_of_nums(n: int) -> List[int]:
     """
@@ -44,7 +44,10 @@ def gen_list_of_nums(n: int) -> List[int]:
     :return: A list of integers
     """
     pass  # remove pass statement and implement me
-
+    test = []
+    for i in range(n):
+        test.append(i)
+    return test
 
 def half_list(list_in: List, half: int) -> List:
     """
@@ -57,6 +60,18 @@ def half_list(list_in: List, half: int) -> List:
     """
     pass  # remove pass statement and implement me
 
+    if len(list_in) % 2 == 0:
+        if half == 1:
+            results = list_in[:int (len(list_in)/2)]
+        elif half == 2:
+            results = list_in[int (-1*(len(list_in)/2)):]
+    elif len(list_in) %2 == 1:
+        if half == 1:
+            results = list_in[:math.ceil((len(list_in)/2))]
+        elif half == 2:
+            results = list_in[math.ceil((-1*(len(list_in)+1))/2):]
+    return results
+
 
 def remove_odds(list_in: List[int]) -> None:
     """
@@ -65,6 +80,15 @@ def remove_odds(list_in: List[int]) -> None:
     :return: None
     """
     pass  # remove pass statement and implement me
+
+    #method currently has issue of removing element
+    result = []
+
+    for i in range(len(list_in)):
+        if ((int(list_in[i])%2)==0):
+            result.append(i)
+    # list_in = result
+    return result
 
 
 def remove_evens(list_in: List[int]) -> None:
@@ -75,6 +99,13 @@ def remove_evens(list_in: List[int]) -> None:
     """
     pass  # remove pass statement and implement me
 
+    result = []
+
+    for i in range(len(list_in)):
+        if ((int(list_in[i])%2)==1):
+            result.append(i)
+    # list_in = result
+    return result
 
 def concatenate_lists(list_a: List, list_b: List) -> List:
     """
